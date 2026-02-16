@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salwa Asyfa Siregar</title>
+<title>Salwa Digital Library</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -27,7 +27,7 @@ header{
 
 .logo{
     font-family:'Great Vibes', cursive;
-    font-size:28px;
+    font-size:30px;
     color:#3E2C23;
 }
 
@@ -47,17 +47,10 @@ nav a:hover{
     color:#8B5E3C;
 }
 
-.search-box{
-    padding:8px 15px;
-    border-radius:20px;
-    border:1px solid #ddd;
-    outline:none;
-}
-
 /* HERO */
 .hero{
     text-align:center;
-    padding:80px 20px 50px;
+    padding:80px 20px 40px;
 }
 
 .hero h1{
@@ -73,30 +66,43 @@ nav a:hover{
     color:#555;
 }
 
-/* AUDIO CARD */
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 28px;
+    background:#3E2C23;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#8B5E3C;
+}
+
+/* AUDIO SECTION */
 .audio-section{
+    text-align:center;
+    margin-top:60px;
+}
+
+.audio-section h2{
+    font-family:'Playfair Display', serif;
+}
+
+.audio-embed{
+    margin-top:25px;
     display:flex;
     justify-content:center;
-    margin-top:40px;
 }
 
-.audio-card{
-    background:#EDE9E5;
-    padding:40px;
-    border-radius:15px;
-    width:80%;
-    max-width:600px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-.audio-card h2{
-    margin-bottom:10px;
-}
-
-audio{
-    width:100%;
-    margin-top:20px;
+.audio-embed iframe{
+    width:400px;
+    height:120px;
+    border-radius:12px;
+    border:none;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 /* MEDIA */
@@ -106,34 +112,25 @@ audio{
 }
 
 .media h2{
-    font-size:28px;
-    margin-bottom:10px;
+    font-family:'Playfair Display', serif;
 }
 
-.media p{
-    max-width:500px;
-    margin:auto;
-    color:#666;
+.video-container{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
 }
 
-.video-card{
-    margin:40px auto;
-    background:white;
-    padding:20px;
-    width:320px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.video-container iframe{
+    width:560px;
+    height:315px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.video-card iframe{
-    width:100%;
-    height:200px;
-    border-radius:10px;
-}
-
-.video-card h3{
+.media-text{
     margin-top:15px;
-    font-size:18px;
+    font-weight:500;
 }
 
 /* FOOTER */
@@ -152,43 +149,42 @@ footer{
 <header>
     <div class="logo">Salwa Asyfa Siregar</div>
     <nav>
-        <a href="#">Beranda</a>
-        <a href="#">Profile</a>
+        <a href="#">Home</a>
+        <a href="cv.html">Curriculum Vitae</a>
         <a href="#">Media</a>
-        <input type="text" class="search-box" placeholder="Search resources...">
     </nav>
 </header>
 
 <section class="hero">
     <h1>Hi, I’m Salwa Asyfa Siregar</h1>
     <p>
-        Hi, I’m Salwa Asyfa Siregar, a Library and Information Science student passionate about digital libraries and information technology. 
-        This website is my digital space to share ideas, learning experiences, and my journey in exploring the evolving world of information.
+        Hi, I’m Salwa Asyfa Siregar, a Library and Information Science student 
+        passionate about digital libraries and information technology. 
+        This website is my digital space to share ideas, learning experiences, 
+        and my journey in exploring the evolving world of information.
     </p>
+
+    <a href="cv.html" class="button">View Curriculum Vitae</a>
 </section>
 
 <section class="audio-section">
-    <div class="audio-card">
-        <h2>🎧 My Audio</h2>
-        <p>Music that helps me focus while learning</p>
-        <audio controls>
-            <source src="https://audio.com/bean/audio/am-i-asking-for-too-much" type="audio/mpeg">
-            Your browser does not support audio.
-        </audio>
+    <h2>🎧 My Audio</h2>
+
+    <div class="audio-embed">
+        <!-- Gunakan embed resmi dari audio.com -->
+        <iframe src="https://audio.com/embed/audio/bean/am-i-asking-for-too-much"></iframe>
     </div>
 </section>
 
 <section class="media">
     <h2>Media</h2>
-    <p>
-        Educational videos related to digital libraries, 
-        information literacy, and modern library technology.
-    </p>
 
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/v7RrObcWF3c" allowfullscreen></iframe>
-        <h3>Sejarah Perpustakaan</h3>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/v7RrObcWF3c"
+        allowfullscreen></iframe>
     </div>
+
+    <p class="media-text">Sejarah Perpustakaan</p>
 </section>
 
 <footer>
