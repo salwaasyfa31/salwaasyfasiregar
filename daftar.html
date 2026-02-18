@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Anggota</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#F4F1EE;
+}
+
+header{
+    background:white;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:24px;
+    color:#3E2C23;
+}
+
+.container{
+    max-width:450px;
+    margin:80px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input{
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-family:'Poppins', sans-serif;
+}
+
+button{
+    padding:12px;
+    background:#3E2C23;
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+button:hover{
+    background:#8B5E3C;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+    margin-top:15px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Form Pendaftaran Anggota</div>
+    <a href="index.html" style="text-decoration:none; color:#3E2C23;">Home</a>
+</header>
+
+<div class="container">
+    <h2>Daftar Anggota</h2>
+
+    <form id="formDaftar">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="No Handphone" required>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <p id="pesan" class="success"></p>
+</div>
+
+<script>
+document.getElementById("formDaftar").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("pesan").innerText = "Daftar";
+});
+</script>
+
+</body>
+</html>
