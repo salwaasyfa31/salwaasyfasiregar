@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#F4F1EE;
+    text-align:center;
+}
+
+.container{
+    max-width:600px;
+    margin:80px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1{
+    font-family:'Playfair Display', serif;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-family:'Poppins', sans-serif;
+    margin-top:15px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#3E2C23;
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Ulasan Pengunjung</h1>
+
+    <p>
+        Kami menghargai setiap masukan dari Anda. 
+        Silakan tuliskan ulasan atau saran Anda di bawah ini.
+    </p>
+
+    <form id="feedbackForm">
+        <textarea placeholder="Tulis ulasan Anda di sini..." required></textarea>
+        <br>
+        <button type="submit">Kirim</button>
+    </form>
+
+    <p id="pesan" class="success"></p>
+</div>
+
+<script>
+document.getElementById("feedbackForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("pesan").innerText = "Terima kasih atas ulasan Anda!";
+});
+</script>
+
+</body>
+</html>
